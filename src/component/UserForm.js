@@ -42,15 +42,14 @@ const UserForm = () => {
     setUsers([]);
   };
 
-  // Стили для поля ввода при наличии ошибки
   const errorInputStyle = {
-    border: '2px solid #b30000', // Тёмно-красный оттенок для рамки при ошибке
-    transition: 'border-color 0.3s ease', // Плавное изменение цвета при фокусе и потере фокуса
+    border: '2px solid #b30000', 
+    transition: 'border-color 0.3s ease',
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className='inpus'>
         <input
           {...register('name')}
           placeholder="Имя"
